@@ -3,12 +3,16 @@ import React from 'react'
 
 const CartScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>CartScreen</Text>
     </View>
   )
 }
 const styles = StyleSheet.create({
-  
+  container:{
+    flex:1,
+   
+  }
+
 });
 export default CartScreen
