@@ -9,7 +9,7 @@ const CartScreen = () => {
       <View style={styles.logoContainer}>
         <Image source={require('../assets/Logo.png')} style={styles.logo} />
           <TouchableOpacity>        
-            <AntDesign name="search1" size={24} color="black" style={styles.iconSearch} />
+            <AntDesign name="search1" size={28} color="black" style={styles.iconSearch} />
           </TouchableOpacity>
       </View>
       <View style={styles.checkContainer}>
@@ -19,20 +19,22 @@ const CartScreen = () => {
         <FlatList
           data={CheckOut}
           renderItem={( {item} ) => (
-          <View>
+          <View style={styles.checkList}>
             <View>
-              <Image source={item.image}  />
+              <Image source={item.image} style={styles.flatImage} />
             </View>
               <View style={styles.itemTextContainer}>
-                <Text>{item.title}</Text>
-                <Text>{item.subTitle}</Text>
-                <Text>{item.price}</Text>
+                <Text style={styles.titleText}>{item.title}</Text>
+                <Text style={styles.subText}>{item.subTitle}</Text>
+                <Text style={styles.priceText}>{item.price}</Text>
               </View>
-              <View>
+              <TouchableOpacity style={[styles.removeIcon, item.iconStyle]}>
                 <Image source={item.icon}  />
-              </View>
+              </TouchableOpacity>
           </View>
           )}
+          keyExtractor={(item) => item.id.toString()}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </View>
@@ -67,10 +69,42 @@ const styles = StyleSheet.create({
   },
   flat:{
     top:90,
+  },
+  itemTextContainer:{
+   flexDirection:"column",
+   marginLeft:12,
+   top:65
+  },
+  titleText:{
+    fontSize:25,
+    letterSpacing: 2.5,
+    fontStyle:"italic",
+    fontWeight:"500",
+  },
+  subText:{
+    color:"gray",
+    fontSize:12,
+    fontWeight:"500",
+  },
+  priceText:{
+    color:"red",
+    fontWeight:"700",
+  },
+  flatImage:{
+    borderRadius:10
+  },
+  checkList:{
+    flexDirection:"row",
+    margin:5
+  },
+  removeIcon:{
+    top:180,
+    right:20
   }
 
 });
 export default CartScreen
+   
     
    
     
