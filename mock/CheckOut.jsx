@@ -9,7 +9,7 @@ export const CheckOut = [
   },
   {
     id:1,
-    image:require("../assets/dress1.png"),
+    image:require("../assets/dress4.png"),
     title: "LAMEREI",
     subTitle:"Recycle Boucle Knit Cardigan Pin",
     price:"$120",
@@ -17,7 +17,7 @@ export const CheckOut = [
   },
   {
     id:2,
-    image:require("../assets/dress1.png"),
+    image:require("../assets/dress3.png"),
     title: "OFFICE WEAR",
     subTitle:"Recycle Boucle Knit Cardigan Pin",
     price:"$120",

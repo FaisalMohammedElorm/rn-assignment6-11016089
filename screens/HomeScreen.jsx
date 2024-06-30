@@ -4,11 +4,11 @@ import { DrawerActions } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import { StoryData } from '../mock/StoryData';
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({ navigation  }) => {
   return (
     <View style={styles.container}>
       <View style={styles.topContainer}>
-        <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
+        <TouchableOpacity onPress={() =>  navigation.dispatch(DrawerActions.toggleDrawer())}>
           <Image source={require("../assets/Menu.png")} />
         </TouchableOpacity>
         <Image source={require("../assets/Logo.png")} />
