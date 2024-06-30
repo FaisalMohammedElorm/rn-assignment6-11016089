@@ -20,9 +20,9 @@ const CartScreen = () => {
           data={CheckOut}
           renderItem={( {item} ) => (
           <View style={styles.checkList}>
-            <View>
+            <TouchableOpacity>
               <Image source={item.image} style={styles.flatImage} />
-            </View>
+            </TouchableOpacity>
               <View style={styles.itemTextContainer}>
                 <Text style={styles.titleText}>{item.title}</Text>
                 <Text style={styles.subText}>{item.subTitle}</Text>

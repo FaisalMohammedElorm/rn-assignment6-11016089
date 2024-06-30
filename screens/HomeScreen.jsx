@@ -25,10 +25,10 @@ const HomeScreen = ({ navigation  }) => {
           data={StoryData}
           renderItem={({ item }) => (
             <View style={styles.itemContainer}>
-              <View>
+              <TouchableOpacity>
                 <Image source={item.image} style={styles.flatImage} />
                 <Image source={item.icon} style={styles.flatIcon} />
-              </View>
+              </TouchableOpacity>
               <View style={styles.textContainer}>
                 <Text style={styles.titleText}>{item.title}</Text>
                 <Text style={styles.subText}>{item.subTitle}</Text>
@@ -85,12 +85,15 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 20,
     fontWeight: 'bold',
+    bottom:20
   },
   subText: {
     color: "gray",
+    bottom:20
   },
   priceText: {
     color: "red",
+    bottom:20
   },
 });
 
