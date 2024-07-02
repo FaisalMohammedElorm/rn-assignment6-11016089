@@ -10,7 +10,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator 
-        initialRouteName="Carts"
+        initialRouteName="Home"
         screenOptions={{
         headerShown: false,
       }}>

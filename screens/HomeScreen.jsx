@@ -3,6 +3,8 @@ import React from 'react';
 import { DrawerActions } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import { StoryData } from '../mock/StoryData';
+import { FontAwesome } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 const HomeScreen = ({ navigation  }) => {
   return (
@@ -18,7 +20,9 @@ const HomeScreen = ({ navigation  }) => {
         </View>
       </View>
       <View style={styles.storyContainer}>
-        <Text style={styles.storyText}>OUR STORY</Text>
+          <Text style={styles.storyText}>OUR STORY</Text>
+          <FontAwesome name="th-list" size={24} color="black" style={{left:48}}/>
+          <Ionicons name="filter" size={24} color="crimson" />
       </View>
       <View style={styles.flatList}>
         <FlatList
@@ -60,6 +64,8 @@ const styles = StyleSheet.create({
   },
   storyContainer: {
     marginTop: 25,
+    flexDirection:"row",
+    justifyContent: "space-between",
   },
   storyText: {
     fontSize: 28,
@@ -98,3 +104,5 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+     
+        
