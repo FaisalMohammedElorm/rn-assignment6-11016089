@@ -105,8 +105,9 @@ const HomeScreen = () => {
           marginTop: 40,
         }}
       >
+      {/** Top Container */}
         <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
-          <Image source={require("../assets/Menu.png")} style={{}} />
+          <Image source={require("../assets/Menu.png")}  />
         </TouchableOpacity>
 
         <View>
@@ -136,7 +137,7 @@ const HomeScreen = () => {
           </View>
         </View>
       </View>
-
+            {/** Story Container */}
       <View style={styles.title}>
         <Text style={styles.topic}>OUR STORY</Text>
         <View style={styles.menu}>
@@ -148,7 +149,7 @@ const HomeScreen = () => {
           </View>
         </View>
       </View>
-
+            {/** FlatList Container */}
       <View style={{ paddingBottom: 400 }}>
         <FlatList
           data={clothesData}
@@ -201,7 +202,7 @@ const styles = StyleSheet.create({
   },
   topic: {
     fontSize: 24,
-    fontWeight: "400",
+    fontWeight: "600",
     marginLeft: 15,
     marginTop: 30,
     letterSpacing: 2,
