@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./screens/HomeScreen";
 import CartScreen from "./screens/CartScreen";
 
-// Create the navigation component and then call it in your other screens using the useNavigation hook in como with Touchable opacity. so when you click on the icon it will let the drawer toggle.(This toggle is what is defined here in the nav component below)
+
 const Drawer = createDrawerNavigator();
 const Navigation = () => {
   return (
@@ -24,7 +24,7 @@ const Navigation = () => {
         },
       })}
     >
-      {/* Set the headershown options of the screens to false so the header does not show at all then the toggle button will work in place of the header there. so in the touchable opacity, you will put the menu icon there that will make the drawer show or not */}
+     
       <Drawer.Screen
         name="HomeScreen"
         component={HomeScreen}
@@ -50,6 +50,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  logo: {},
+  
 });
 export default Navigation;
